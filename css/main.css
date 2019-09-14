@@ -110,9 +110,18 @@ p{
     height: inherit;
     padding: 0;
 }
-/*Modificar el enlace*/
-.container .fas-fa-arrow-circle-down{
-    
+/*Creando GRID el contenido ABOUT*/
+.about .container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 25% auto;
+}
+
+/*Creando FLEX los article, reduciendo su tamaño*/
+
+.green-area .post article{
+    display: flexbox;
+    box-sizing: content-box;
 }
 
 .green-area {
@@ -133,12 +142,16 @@ p{
 
 .post ul {
     list-style: none;
+    align-content: center;
+    align-items: center;
 }
 
 .post ul li {
+    display: flexbox;
     min-height: 300px;
     max-width: 350px;
     margin: 2rem auto;
+    align-items: center;
 }
 
 .post ul li article {
@@ -147,6 +160,10 @@ p{
     background-color: #ffffff;
     text-align: left;
     padding-bottom: 2em;
+    width: 20em;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
 }
 
 .post article img{
@@ -183,6 +200,15 @@ p{
     font-weight: 700;
     font-size: 1.125em;
     margin: 2em;
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.bio-info{
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-column-end: auto;
+    grid-row-end: auto;
 }
 
 .bio-info img{
@@ -202,6 +228,7 @@ p{
     flex-direction: column;
     text-align: left;
     padding: 0px 1em;
+    grid-column-start: 2;
 }
 
 .contact * + * {
@@ -320,11 +347,6 @@ footer .social-links {
         display: flex;
         margin-top: 1em;
     }
-
-
-
-
-    /*TODO: FALTA CSS */
 } 
 
 @media only screen and (min-width: 1024px) {
