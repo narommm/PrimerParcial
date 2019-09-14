@@ -200,13 +200,17 @@ p{
     font-weight: 700;
     font-size: 1.125em;
     margin: 2em;
-    grid-column: 1/2;
-    grid-row: 1/2;
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    justify-items: center;
+    
 }
 
 .bio-info{
     grid-column-start: 1;
-    grid-row-start: 1;
+    grid-row-start: 2;
     grid-column-end: auto;
     grid-row-end: auto;
 }
@@ -228,7 +232,10 @@ p{
     flex-direction: column;
     text-align: left;
     padding: 0px 1em;
+    grid-row-start: 2;
     grid-column-start: 2;
+    grid-column-end: auto;
+    grid-row-end: auto;
 }
 
 .contact * + * {
