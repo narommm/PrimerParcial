@@ -25,6 +25,11 @@ body {
     padding-inline-end: 10em;
 }
 
+/*Cambio de color en el nav*/
+.header nav ul li:last-child a{
+    color: red;
+}
+
 .src-only {
     display: none;
 }
@@ -80,6 +85,12 @@ p{
     color: #D7DEE6;
 
 }
+/*Aumentando el tamaño del icono y su espacio*/
+.big-hero div.container a.hide-mobile{
+font-size: 2em;
+color:  #0AC693;
+height: 5em;
+}
 
 /* Social links*/
 .social-links{
@@ -88,7 +99,7 @@ p{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 100px ;
+    height: 5em;
     padding-inline-start: 0;
 
 }
@@ -96,20 +107,16 @@ p{
     height: inherit;
 }
 
+/*Modificar el color de los iconos y aumentando su tamaño*/
 .social-links li a{
     display: flex;
     color: #D7DEE6;
     text-decoration: none;
-    font-size: 5em;
-    margin: 0 0.1em;
-    height: 0;
+    font-size: 10em;
+    margin: 0.1em;
     align-items: flex-start;
 }
 
-.social-links li a i{
-    height: inherit;
-    padding: 0;
-}
 /*Creando GRID el contenido ABOUT*/
 .about .container{
     display: grid;
@@ -242,19 +249,17 @@ p{
     margin-top: 1.5em;
 }
 
-.contact-form {
-    display: flex;
-    flex-direction: column;
-}
-
 .contact-form input, .contact-form textarea{
     padding: 1rem 2rem;
     border: none;
     border-radius: 0px 2em;
     font-size: 1em;
-    width: 100%;
-}
+    width: 90%;
 
+}
+.contact-form label{
+    
+}
 /* Decorando placeholder */
 
 ::-webkit-input-placeholder { 
@@ -272,6 +277,7 @@ p{
     font-weight: 400;
     color: white;
     font-size: 1rem;
+    width: 15em;
 }
 
 .black-decoration{
