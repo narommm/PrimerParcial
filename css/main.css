@@ -27,11 +27,6 @@ body {
   padding-inline-end: 10em;
 }
 
-/*Cambio de color en el último elemento del nav*/
-.header nav ul li:last-child a {
-  color: red;
-}
-
 .src-only {
   display: none;
 }
@@ -85,12 +80,6 @@ p {
   color: #d7dee6;
   padding: 0;
 }
-/*Aumentando el tamaño del ICONO y su espacio*/
-.big-hero div.container a.hide-mobile {
-  font-size: 2em;
-  color: #0ac693;
-  height: 5em;
-}
 
 /* Social links*/
 .social-links {
@@ -100,23 +89,21 @@ p {
   flex-direction: row;
   justify-content: center;
   height: 2em;
-  font-size: 8em;
+  /*font-size: 20em;*/
 }
 
+.social-links{
+  padding-block-end: 5em;
+}
 /*Modificar el color de los ICONOS SOCIALES y aumentando su tamaño*/
 .social-links li a {
-  display: flex;
-  color: #d7dee6;
-  text-decoration: none;
-  margin: 1em;
   align-items: flex-start;
 }
-
-/*Creando GRID el contenido ABOUT*/
-.about .container {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 25% auto;
+.social-links li a i {
+  color: #d7dee6;
+  text-decoration: none;
+  
+  font-size: 1.5em;
 }
 
 /*Creando FLEX los article, reduciendo su tamaño*/
@@ -237,7 +224,13 @@ p {
   border: none;
   border-radius: 0px 2em;
   font-size: 1em;
+  font-weight: 900;
   width: 90%;
+  margin-bottom: 1.5em;
+}
+
+.contact-form label {
+  font-weight: bold;
 }
 /* Decorando placeholder */
 
@@ -370,7 +363,8 @@ footer .social-links {
     grid-column-end: auto;
     grid-row-end: auto;
   }
-  .container {
+  .container.post{
+    padding: 4em;
     width: 80%;
     margin: 0 auto;
     max-width: 1440px;
@@ -410,9 +404,112 @@ footer .social-links {
     height: 2em;
   }
 
-  /*Para pantalla completa de*/
-  @media only screen and (min-width: 1440px) {
-    /*TODO: FALTA CSS */
+  /*Para pantalla completa de ESCRITORIO*/
+  @media only screen and (min-width: 1287px) {
+    *,
+    ::before,
+    ::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-size: calc(0.5em + 1vh);
+    }
+
+    /*Cambio de color en el último elemento del nav*/
+    .header nav ul li:last-child a {
+      color: red;
+    }
+    .social-links{
+      height: 6em;
+      align-items: flex-start;
+    }
+
+    .social-links li{
+      padding: 0;
+      align-items: flex-start;
+    }
+    /*Modificar el color de los ICONOS SOCIALES y aumentando su tamaño*/
+    .social-links li a i {
+      color: #d7dee6;
+      text-decoration: none;
+      font-size: 3em;
+      padding: 0em,3em, 0em, 3em;
+      align-items: flex-start;
+    }
+    /*Aumentando el tamaño del ICONO y su espacio*/
+    .big-hero div.container a.hide-mobile i {
+      font-size: 4em;
+      color: #0ac693;
+      padding-block-end: 5em;
+    }
+    .green-area .post article {
+      display: flexbox;
+      box-sizing: content-box;
+    }
+
+    .green-area {
+      background-color: #0ac693;
+    }
+
+    .post {
+      padding: 1em;
+      margin-bottom: -2px;
+    }
+    .post h2 {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 1.125em;
+      margin: 1em;
+    }
+
+    .post ul {
+      list-style: none;
+      align-content: center;
+      align-items: center;
+    }
+
+    .post ul li {
+      min-height: 300px;
+      max-width: 350px;
+      margin: 2rem auto;
+      align-items: flex-end;
+      align-content: center;
+    }
+
+    .post ul li article {
+      overflow: hidden;
+      border-radius: 10px;
+      background-color: #ffffff;
+      text-align: left;
+      padding-bottom: 2em;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+    }
+
+    .post article img {
+      height: 150px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .post article h3 {
+      color: #0d5061;
+      margin-top: 2em;
+      padding: 0em 1rem;
+      font-size: 0.9em;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .post article p {
+      color: #112935;
+      font-size: 0.75em;
+      padding: 1rem;
+      line-height: 25px;
+    }
+
     .about .container {
       display: grid;
       grid-template-columns: 50% 50%;
