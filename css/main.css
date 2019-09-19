@@ -92,7 +92,7 @@ p {
   /*font-size: 20em;*/
 }
 
-.social-links{
+.social-links {
   padding-block-end: 5em;
 }
 /*Modificar el color de los ICONOS SOCIALES y aumentando su tamaño*/
@@ -102,7 +102,7 @@ p {
 .social-links li a i {
   color: #d7dee6;
   text-decoration: none;
-  
+
   font-size: 1.5em;
 }
 
@@ -363,7 +363,7 @@ footer .social-links {
     grid-column-end: auto;
     grid-row-end: auto;
   }
-  .container.post{
+  .container.post {
     padding: 4em;
     width: 80%;
     margin: 0 auto;
@@ -419,12 +419,12 @@ footer .social-links {
     .header nav ul li:last-child a {
       color: red;
     }
-    .social-links{
+    .social-links {
       height: 6em;
       align-items: flex-start;
     }
 
-    .social-links li{
+    .social-links li {
       padding: 0;
       align-items: flex-start;
     }
@@ -433,7 +433,7 @@ footer .social-links {
       color: #d7dee6;
       text-decoration: none;
       font-size: 3em;
-      padding: 0em,3em, 0em, 3em;
+      padding: 0em, 3em, 0em, 3em;
       align-items: flex-start;
     }
     /*Aumentando el tamaño del ICONO y su espacio*/
@@ -464,16 +464,12 @@ footer .social-links {
 
     .post ul {
       list-style: none;
-      align-content: center;
-      align-items: center;
     }
 
     .post ul li {
       min-height: 300px;
       max-width: 350px;
       margin: 2rem auto;
-      align-items: flex-end;
-      align-content: center;
     }
 
     .post ul li article {
@@ -482,9 +478,6 @@ footer .social-links {
       background-color: #ffffff;
       text-align: left;
       padding-bottom: 2em;
-      justify-content: center;
-      align-content: center;
-      align-items: center;
     }
 
     .post article img {
