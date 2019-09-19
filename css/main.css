@@ -42,9 +42,13 @@ p {
   line-height: 25px;
 }
 
-.logo {
+.logo img{
   width: 90px;
   margin: 1.5em;
+}
+
+.logo h1{
+  width: 60px;
 }
 
 .options {
@@ -404,6 +408,7 @@ footer .social-links {
     height: 2em;
   }
 
+
   /*Para pantalla completa de ESCRITORIO*/
   @media only screen and (min-width: 1287px) {
     *,
@@ -450,16 +455,20 @@ footer .social-links {
     .green-area {
       background-color: #0ac693;
     }
-
+    .green-area .post{
+      padding: 0;
+      width: 100%;
+    }
     .post {
       padding: 1em;
       margin-bottom: -2px;
+      height: inherit;
     }
     .post h2 {
       text-transform: uppercase;
       font-weight: 700;
       font-size: 1.125em;
-      margin: 1em;
+      padding: 1em  0 0.5em 0;
     }
 
     .post ul {
@@ -469,7 +478,8 @@ footer .social-links {
     .post ul li {
       min-height: 300px;
       max-width: 350px;
-      margin: 2rem auto;
+      padding: 0 2em 0 2em;
+      margin: 2rem 0 2em 0;
     }
 
     .post ul li article {
