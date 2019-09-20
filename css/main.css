@@ -43,7 +43,6 @@ p {
 }
 
 .logo img{
-  width: 90px;
   margin: 1.5em;
 }
 
@@ -408,7 +407,15 @@ footer .social-links {
     height: 2em;
   }
 
+  @media only screen and (min-width: 1440px) {
 
+    /*TODO: FALTA CSS */
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        max-width: 1440px;
+    }
+}
   /*Para pantalla completa de ESCRITORIO*/
   @media only screen and (min-width: 1287px) {
     *,
@@ -420,6 +427,9 @@ footer .social-links {
       font-size: calc(0.5em + 1vh);
     }
 
+    .header img{
+      padding: 0 2em 0 1em;
+    }
     /*Cambio de color en el último elemento del nav*/
     .header nav ul li:last-child a {
       color: red;
@@ -468,18 +478,25 @@ footer .social-links {
       text-transform: uppercase;
       font-weight: 700;
       font-size: 1.125em;
-      padding: 1em  0 0.5em 0;
+      margin: 0;
+      /*padding: 1em  0 0.5em 0;*/
+      padding-top: 2em;
     }
 
     .post ul {
       list-style: none;
+      padding-block-end: 2em;
     }
 
     .post ul li {
+      display: flex;
       min-height: 300px;
       max-width: 350px;
       padding: 0 2em 0 2em;
       margin: 2rem 0 2em 0;
+      align-items: center;
+      justify-content: center;
+      justify-items: center;
     }
 
     .post ul li article {
@@ -488,6 +505,7 @@ footer .social-links {
       background-color: #ffffff;
       text-align: left;
       padding-bottom: 2em;
+      width: 20em;
     }
 
     .post article img {
