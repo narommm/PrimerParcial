@@ -23,8 +23,9 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
-  padding-inline-start: 10em;
-  padding-inline-end: 10em;
+  padding-top: 1em;
+  padding-inline-start: 3em;
+  padding-inline-end: 3em;
 }
 
 .src-only {
@@ -57,7 +58,6 @@ p {
   top: 30%;
   right: 95%;
   font-size: 1.5rem;
-
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
@@ -68,7 +68,8 @@ p {
 
 /* Big area */
 .big-hero img {
-  width: 150px;
+  width: 110px;
+  margin-top: 1.5em;
 }
 
 .big-hero h2 {
@@ -91,8 +92,6 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: 2em;
-  /*font-size: 20em;*/
 }
 
 .social-links {
@@ -104,9 +103,10 @@ p {
 }
 .social-links li a i {
   color: #d7dee6;
+  display: inline-block;
   text-decoration: none;
-
-  font-size: 1.5em;
+  font-size: 3.5em;
+  padding: 0 0.2em 0 0.2em;
 }
 
 /*Creando FLEX los article, reduciendo su tamaño*/
@@ -117,7 +117,12 @@ p {
 }
 
 .green-area {
+  display: flex;
   background-color: #0ac693;
+
+  align-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .post {
@@ -135,6 +140,7 @@ p {
   list-style: none;
   align-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .post ul li {
@@ -149,7 +155,8 @@ p {
   overflow: hidden;
   border-radius: 10px;
   background-color: #ffffff;
-  text-align: left;
+  text-align: center;
+  width: 18em;
   padding-bottom: 2em;
   justify-content: center;
   align-content: center;
@@ -191,25 +198,23 @@ p {
   font-size: 1.125em;
   margin: 2em;
 }
-
+.bio-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .bio-info img {
-  width: 200px;
+  width: 150px;
 }
 
 .bio-info p {
   font-size: 16px;
-  padding: 2em;
+  padding: 1em;
   text-align: left;
   line-height: 25px;
   letter-spacing: 2px;
-}
-
-.bio-info p {
-  font-size: 16px;
-  padding: 2em;
-  text-align: left;
-  line-height: 25px;
-  letter-spacing: 2px;
+  width: 18em;
 }
 .contact {
   display: flex;
@@ -232,8 +237,17 @@ p {
   margin-bottom: 1.5em;
 }
 
+.contact-form {
+  padding-left: 3em;
+}
 .contact-form label {
   font-weight: bold;
+}
+.contact-form input[type="submit"] {
+  background-color: #f74442;
+  font-weight: 400;
+  color: white;
+  font-size: 1rem;
 }
 /* Decorando placeholder */
 
@@ -255,14 +269,6 @@ p {
   color: #d7dee6;
 }
 
-.contact-form input[type="submit"] {
-  background-color: #f74442;
-  font-weight: 400;
-  color: white;
-  font-size: 1rem;
-  width: 15em;
-}
-
 .black-decoration {
   background-image: url("../images/decoracion_oscura_small.svg");
 }
@@ -273,9 +279,11 @@ footer {
 }
 
 footer .social-links {
-  margin: 0;
+  padding: 0;
 }
-
+footer p {
+  padding-top: 0;
+}
 .menu {
   background-color: #112935;
   position: absolute;
@@ -304,6 +312,105 @@ footer .social-links {
 
 /* Pesonalizando estilo para TABLETS*/
 @media only screen and (min-width: 768px) {
+  .src-only {
+    display: none;
+  }
+
+  .hide-mobile {
+    display: none;
+    font-size: 0.2em;
+  }
+
+  p {
+    font-size: 0.75em;
+    padding: 1rem;
+    line-height: 25px;
+  }
+  .logo {
+    width: 150px;
+    margin: 1.5em;
+  }
+  /*Aumentar el padding derecho para visualizar la imagen completa*/
+  .header img.logo {
+    margin: 0;
+    padding-right: 0.5em;
+  }
+  /* Social links*/
+  .social-links {
+    list-style: none;
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .social-links {
+    padding-block-end: 1em;
+  }
+  /*Modificar el color de los ICONOS SOCIALES y aumentando su tamaño*/
+  .social-links li a {
+    align-items: flex-start;
+  }
+  .social-links li a i {
+    color: #d7dee6;
+    text-decoration: none;
+    font-size: 4em;
+  }
+  /*Aumentando el tamaño del ICONO y su espacio*/
+  .big-hero div.container a.hide-mobile {
+    font-size: 4em;
+    color: #0ac693;
+    padding-block-end: 1em;
+  }
+
+  .post ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .post ul li {
+    display: flex;
+    min-height: 350px;
+    max-height: 3500px;
+    margin: 1rem 2rem;
+    flex: 1 0 300px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo {
+    width: 150px;
+    margin: 1.5em;
+  }
+
+  .show-desktop {
+    display: block;
+  }
+
+  .hide-desktop {
+    display: none;
+  }
+
+  .menu {
+    background-color: #112935;
+    position: static;
+    z-index: 20;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: 1em;
+  }
+
+  /*Cambio de color en el último elemento del nav*/
+  .header nav ul li:last-child a {
+    color: red;
+  }
+  .options i:last-child {
+    font-size: 1.6rem;
+  }
+
   .post ul {
     list-style: none;
     display: flex;
@@ -340,10 +447,48 @@ footer .social-links {
     display: flex;
     margin-top: 1em;
   }
+  .about .container .bio-info p {
+    width: 100%;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
-  /*TODO: FALTA CSS */
+  .green-area .post {
+    width: 100%;
+    margin: auto;
+    padding: auto;
+  }
+  .post h2 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.125em;
+    margin: 0;
+    /*padding: 1em  0 0.5em 0;*/
+    padding-top: 2em;
+  }
+  .post ul {
+    list-style: none;
+    padding-block-end: 2em;
+  }
+
+  .post ul li {
+    display: flex;
+    padding: 0 2em 0 2em;
+    margin: 2rem 0 2em 0;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+  }
+
+  .post ul li article {
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #ffffff;
+    text-align: left;
+    padding-bottom: 2em;
+    width: 18em;
+  }
+
   .social-links {
     list-style: none;
     padding: 0;
@@ -393,322 +538,304 @@ footer .social-links {
     grid-column-end: auto;
     grid-row-end: auto;
   }
+  .contact-form input[type="submit"] {
+    background-color: #f74442;
+    font-weight: 400;
+    color: white;
+    font-size: 1rem;
+    width: 15em;
+  }
 }
-
-@media only screen and (min-width: 414px) {
+@media only screen and (min-width: 1440px) {
   .header {
-    padding: 0;
+    display: flex;
     justify-content: space-between;
-    margin-left: 6em;
-    margin-right: 6em;
+    width: 100%;
+    margin: 0;
   }
+
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1440px;
+  }
+  .big-hero {
+    align-items: center;
+  }
+  /* Social links*/
+  .social-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 0;
+    height: 5em;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  /*Modificar el color de los ICONOS SOCIALES y aumentando su tamaño*/
   .social-links li a {
-    font-size: 2em;
-    margin: 0.3em;
+    color: #d7dee6;
+    text-decoration: none;
+    font-size: 1.5em;
+    padding: 0em, 3em, 0em, 3em;
+    /*align-items: flex-start;*/
   }
-  .contact {
-    padding: 1em 3em;
+  /*Aumentando el tamaño del ICONO y su espacio #0ac693*/
+  .big-hero div.container a.hide-mobile i {
+    font-size: 3em;
+    color: red;
+    padding-block-start: 1em;
+    padding-block-end: 10em;
   }
-  .bio-info {
-    padding: 1em 2em;
+  /*Creando flex el contenedor*/
+  .big-hero div.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Big area */
+  .big-hero img {
+    width: 150px;
+    margin-top: 4em;
+  }
+
+  .big-hero h2 {
+    font-size: 1.875em;
+    font-weight: 700;
+    letter-spacing: 0.002em;
+    margin-top: 1em;
+  }
+
+  .big-hero p {
+    font-size: 0.7em;
+    color: #d7dee6;
+  }
+
+  .green-area .post article {
+    display: flexbox;
+    box-sizing: content-box;
+    border-width: 100px;
+    width: 40em;
+  }
+
+  .green-area {
+    background-color: #0ac693;
+  }
+  /*Distribuir los elementos del content*/
+  .green-area .post ul {
+    justify-content: space-evenly;
+  }
+  .green-area .post {
+    padding: 0 5em 0 5em;
+    width: 100%;
+  }
+  /**/
+  div.contact .contact-form {
+    padding-left: 5em;
   }
 
   footer .social-links {
-    height: 2em;
-  }
-
-  @media only screen and (min-width: 1440px) {
-    .header {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      margin: 0;
-    }
-   
-    .container {
-      width: 80%;
-      margin: 0 auto;
-      max-width: 1440px;
-    }
-    .big-hero {
-      align-items: center;
-    }
-    /* Social links*/
-    .social-links {
-      list-style: none;
-      padding: 0;
-      margin-top: 0;
-      height: 5em;
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: flex-start;
-    }
-    /*Modificar el color de los ICONOS SOCIALES y aumentando su tamaño*/
-    .social-links li a {
-      color: #d7dee6;
-      text-decoration: none;
-      font-size: 1.5em;
-      padding: 0em, 3em, 0em, 3em;
-      /*align-items: flex-start;*/
-    }
-    /*Aumentando el tamaño del ICONO y su espacio*/
-    .big-hero div.container a.hide-mobile i {
-      font-size: 1em;
-      color: #0ac693;
-      padding-block-start: 0.1em;
-      padding-block-end: 0.5em;
-    }
-    /*Creando flex el contenedor*/
-    .big-hero div.container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    /* Big area */
-    .big-hero img {
-      width: 150px;
-      margin-top: 4em;
-    }
-
-    .big-hero h2 {
-      font-size: 1.875em;
-      font-weight: 700;
-      letter-spacing: 0.002em;
-      margin-top: 1em;
-    }
-
-    .big-hero p {
-      font-size: 0.7em;
-      color: #d7dee6;
-    }
-
-    .green-area .post article {
-      display: flexbox;
-      box-sizing: content-box;
-      border-width: 100px;
-      width: 40em;
-    }
-
-    .green-area {
-      background-color: #0ac693;
-    }
-    /*Distribuir los elementos del content*/
-    .green-area .post ul {
-      justify-content: space-evenly;
-    }
-    .green-area .post {
-      padding: 0 5em 0 5em;
-      width: 100%;
-    }
-    /**/
-    div.contact .contact-form {
-      padding-left: 5em;
-    }
-
-    footer .social-links{
-      height: 5em;
-    }
-  }
-
-  /*Para pantalla completa LAPTOP VAIO*/
-  @media only screen and (min-width: 1287px) {
-    *,
-    ::before,
-    ::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-size: calc(0.5em + 1vh);
-    }
-
-    /*.header img{
-      padding: 0 2em 0 1em;
-    }*/
-    .header nav ul {
-      margin: 0;
-      padding-top: 0;
-    }
-    .header img.logo {
-      margin: 0;
-      padding-right: 2em;
-    }
-    /*Cambio de color en el último elemento del nav*/
-    .header nav ul li:last-child a {
-      color: red;
-    }
-    .social-links {
-      list-style: none;
-      padding: 0;
-      margin-top: 0;
-      height: 5em;
-      display: flex;
-      width: 100%;
-
-      flex-direction: row;
-      justify-content: flex-start;
-      justify-content: center;
-      align-items: flex-start;
-    }
-
-    .social-links li {
-      padding: 0;
-      justify-content: space-between;
-      align-items: flex-start;
-    }
-    /*Modificar el color de los ICONOS SOCIALES y aumentando su tamaño*/
-    .social-links li a i {
-      color: #d7dee6;
-      text-decoration: none;
-      font-size: 3em;
-      /*padding: 0em, 3em, 0em, 3em;*/
-      align-items: flex-start;
-    }
-    /*Creando flex el contenedor*/
-    .big-hero div.container {
-      display: flex;
-      flex-direction: column;
-
-      align-items: center;
-    }
-
-    /* Big area */
-    .big-hero img {
-      width: 150px;
-      margin-top: 4em;
-    }
-
-    .big-hero h2 {
-      font-size: 1.875em;
-      font-weight: 700;
-      letter-spacing: 0.002em;
-      margin-top: 1em;
-    }
-
-    .big-hero p {
-      font-size: 0.7em;
-      color: #d7dee6;
-    }
-
-    /*Aumentando el tamaño del ICONO y su espacio*/
-    .big-hero div.container a.hide-mobile i {
-      font-size: 4em;
-      color: #0ac693;
-      padding-block-end: 3em;
-    }
-    .green-area .post article {
-      display: flexbox;
-      box-sizing: content-box;
-    }
-
-    .green-area {
-      background-color: #0ac693;
-    }
-    .green-area .post {
-      padding: 0;
-      width: 100%;
-    }
-    .post {
-      padding: 1em;
-      margin-bottom: -2px;
-      height: inherit;
-    }
-    .post h2 {
-      text-transform: uppercase;
-      font-weight: 700;
-      font-size: 1.125em;
-      margin: 0;
-      /*padding: 1em  0 0.5em 0;*/
-      padding-top: 2em;
-    }
-
-    .post ul {
-      list-style: none;
-      padding-block-end: 2em;
-    }
-
-    .post ul li {
-      display: flex;
-      min-height: 300px;
-      max-width: 350px;
-      padding: 0 2em 0 2em;
-      margin: 2rem 0 2em 0;
-      align-items: center;
-      justify-content: center;
-      justify-items: center;
-    }
-
-    .post ul li article {
-      overflow: hidden;
-      border-radius: 10px;
-      background-color: #ffffff;
-      text-align: left;
-      padding-bottom: 2em;
-      width: 20em;
-    }
-
-    .post article img {
-      height: 150px;
-      width: 100%;
-      object-fit: cover;
-    }
-
-    .post article h3 {
-      color: #0d5061;
-      margin-top: 2em;
-      padding: 0em 1rem;
-      font-size: 0.9em;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .post article p {
-      color: #112935;
-      font-size: 0.75em;
-      padding: 1rem;
-      line-height: 25px;
-    }
-
-    .about .container {
-      display: grid;
-      grid-template-columns: 50% 50%;
-      grid-template-rows: 25% auto;
-    }
-    .about h2 {
-      text-transform: uppercase;
-      font-weight: 700;
-      font-size: 1.125em;
-      margin: 2em;
-      grid-column-start: 1;
-      grid-column-end: span 2;
-      grid-row-start: 1;
-      grid-row-end: 2;
-      justify-items: center;
-    }
-    .bio-info {
-      grid-column-start: 1;
-      grid-row-start: 2;
-      grid-column-end: auto;
-      grid-row-end: auto;
-    }
-    .container {
-      width: 80%;
-      margin: 0 auto;
-      max-width: 1440px;
-    }
-
-    .contact {
-      display: flex;
-      flex-direction: column;
-      text-align: left;
-      padding: 0px 1em;
-      grid-row-start: 2;
-      grid-column-start: 2;
-      grid-column-end: auto;
-      grid-row-end: auto;
-    }
+    height: 5em;
   }
 }
+
+/*Para pantalla completa LAPTOP VAIO
+@media only screen and (min-width: 1287px) {
+  *,
+  ::before,
+  ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: calc(0.5em + 1vh);
+  }
+
+  /*.header img{
+      padding: 0 2em 0 1em;
+    }*/
+/*.header nav ul {
+    margin: 0;
+    padding-top: 0;
+  }
+  .header img.logo {
+    margin: 0;
+    padding-right: 2em;
+  }
+  /*Cambio de color en el último elemento del nav*/
+/* .header nav ul li:last-child a {
+    color: red;
+  }
+  .social-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 0;
+    height: 5em;
+    display: flex;
+    width: 100%;
+
+    flex-direction: row;
+    justify-content: flex-start;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .social-links li {
+    padding: 0;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  /*Modificar el color de los ICONOS SOCIALES y aumentando su tamaño*/
+/*.social-links li a i {
+    color: #d7dee6;
+    text-decoration: none;
+    font-size: 3em;
+    /*padding: 0em, 3em, 0em, 3em;
+    align-items: flex-start;
+  }
+  /*Creando flex el contenedor*/
+/*.big-hero div.container {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  /* Big area */
+/*.big-hero img {
+    width: 150px;
+    margin-top: 4em;
+  }
+
+  .big-hero h2 {
+    font-size: 1.875em;
+    font-weight: 700;
+    letter-spacing: 0.002em;
+    margin-top: 1em;
+  }
+
+  .big-hero p {
+    font-size: 0.7em;
+    color: #d7dee6;
+  }
+
+  /*Aumentando el tamaño del ICONO y su espacio
+  .big-hero div.container a.hide-mobile i {
+    font-size: 4em;
+    color: #0ac693;
+    padding-block-end: 3em;
+  }
+  .green-area .post article {
+    display: flexbox;
+    box-sizing: content-box;
+  }
+
+  .green-area {
+    background-color: #0ac693;
+  }
+  .green-area .post {
+    padding: 0;
+    width: 100%;
+  }
+  .post {
+    padding: 1em;
+    margin-bottom: -2px;
+    height: inherit;
+  }
+  .post h2 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.125em;
+    margin: 0;
+    /*padding: 1em  0 0.5em 0;
+    padding-top: 2em;
+  }
+
+  .post ul {
+    list-style: none;
+    padding-block-end: 2em;
+  }
+
+  .post ul li {
+    display: flex;
+    min-height: 300px;
+    max-width: 350px;
+    padding: 0 2em 0 2em;
+    margin: 2rem 0 2em 0;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+  }
+
+  .post ul li article {
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #ffffff;
+    text-align: left;
+    padding-bottom: 2em;
+    width: 20em;
+  }
+
+  .post article img {
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .post article h3 {
+    color: #0d5061;
+    margin-top: 2em;
+    padding: 0em 1rem;
+    font-size: 0.9em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .post article p {
+    color: #112935;
+    font-size: 0.75em;
+    padding: 1rem;
+    line-height: 25px;
+  }
+
+  .about .container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 25% auto;
+  }
+  .about h2 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.125em;
+    margin: 2em;
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    justify-items: center;
+  }
+  .bio-info {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    grid-column-end: auto;
+    grid-row-end: auto;
+  }
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1440px;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 0px 1em;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-column-end: auto;
+    grid-row-end: auto;
+  }*/
