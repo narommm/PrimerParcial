@@ -20,6 +20,7 @@ body {
   font-weight: 400;
 }
 
+/*Dimensionando el header para pantalla móvil*/
 .header {
   display: flex;
   justify-content: space-between;
@@ -31,17 +32,19 @@ body {
 .src-only {
   display: none;
 }
-
+/*Definiendo el tamaño del icono*/
 .hide-mobile {
   display: none;
   font-size: 1em;
 }
 
+/*Ajustando el tamaño del parrafo en el header*/
 p {
   font-size: 0.75em;
   padding: 1rem;
   line-height: 25px;
 }
+/*Controla el tamaño de la imagen de Perfil*/
 .logo {
   width: 90px;
   margin: 1em;
@@ -51,6 +54,7 @@ p {
   margin: 0;
   padding-right: 0.5em;
 }
+/*Iconos*/
 .options {
   color: inherit;
   text-decoration: none;
@@ -94,6 +98,7 @@ p {
   justify-content: center;
 }
 
+/*Aumenta el tamaño del padding en la parte inferior de los iconos social-links*/
 .social-links {
   padding-block-end: 5em;
 }
@@ -101,6 +106,8 @@ p {
 .social-links li a {
   align-items: flex-start;
 }
+
+/*Modifica el color y tamaño de iconos social-links*/
 .social-links li a i {
   color: #d7dee6;
   display: inline-block;
@@ -110,39 +117,40 @@ p {
 }
 
 /*Creando FLEX los article, reduciendo su tamaño*/
-
 .green-area .post article {
   display: flexbox;
   box-sizing: content-box;
 }
 
+/*Centra los items dentro del mismo para ajustarlos al centro*/
 .green-area {
   display: flex;
   background-color: #0ac693;
-
   align-content: center;
   align-items: center;
   justify-content: center;
 }
 
+/*El contenedor principal aumenta su padding*/
 .post {
   padding: 1em;
   margin-bottom: -2px;
 }
+/*Ajustable el tamaño de PUBLICACIONES para la pantalla móvil transformando la palabra a mayúsculas*/
 .post h2 {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 1.125em;
   margin: 1em;
 }
-
+/*Ajusta el contenedor y los items al centro y los justifica*/
 .post ul {
   list-style: none;
   align-content: center;
   align-items: center;
   justify-content: center;
 }
-
+/*Diseña el contentBox con las medidas para cada articulo*/
 .post ul li {
   min-height: 300px;
   max-width: 350px;
@@ -150,7 +158,8 @@ p {
   align-items: flex-end;
   align-content: center;
 }
-
+/*Otorga el diseño del contentBox con respecto a los bordes,
+además se ajusta el ancho del mismo */
 .post ul li article {
   overflow: hidden;
   border-radius: 10px;
@@ -163,12 +172,15 @@ p {
   align-items: center;
 }
 
+/*Modifica el tamaño de la imagen con el articulo y ajusta con cover
+la imagen al tamaño del contentBox*/
 .post article img {
   height: 150px;
   width: 100%;
   object-fit: cover;
 }
 
+/*Le da diseño del encabezado del articulo*/
 .post article h3 {
   color: #0d5061;
   margin-top: 2em;
@@ -179,6 +191,7 @@ p {
   text-overflow: ellipsis;
 }
 
+/*Le da color especifico al texto, y ajusta altura de la línea*/
 .post article p {
   color: #112935;
   font-size: 0.75em;
@@ -188,16 +201,19 @@ p {
 
 /* About */
 
+/*Le da un espacio en la sección de arriba*/
 .about {
   margin-top: 2em;
 }
 
+/*Modifica el */
 .about h2 {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 1.125em;
   margin: 2em;
 }
+/*Creando el contenedor flex para ajustar los articulos*/
 .bio-info {
   display: flex;
   flex-direction: column;
@@ -216,16 +232,20 @@ p {
   letter-spacing: 2px;
   width: 18em;
 }
+/*Centra los elementos del formato de contacto*/
 .contact {
   display: flex;
   flex-direction: column;
   text-align: left;
   padding: 0px 1em;
 }
+
+/*Calcula el tamaño de los margenes*/
 .contact * + * {
   margin-top: 1.5em;
 }
 
+/*Diseño del formato de contacto*/
 .contact-form input,
 .contact-form textarea {
   padding: 1rem 2rem;
@@ -243,6 +263,7 @@ p {
 .contact-form label {
   font-weight: bold;
 }
+/*Diseña especificamente el botón de enviar formulario*/
 .contact-form input[type="submit"] {
   background-color: #f74442;
   font-weight: 400;
@@ -273,11 +294,12 @@ p {
   background-image: url("../images/decoracion_oscura_small.svg");
 }
 
+/*Diseño especifico para el footer*/
 footer {
   background-color: #0d5061;
   color: #d7dee6;
 }
-
+/*Modifica los iconos de social-links de la etiqueta footer*/
 footer .social-links {
   padding: 0;
 }
@@ -320,12 +342,13 @@ footer p {
     display: none;
     font-size: 0.2em;
   }
-
+  /*Reajustando el tamaño de la lista de componentes de la página*/
   p {
     font-size: 0.75em;
     padding: 1rem;
     line-height: 25px;
   }
+  /*Cambia el tamaño de la foto de perfil*/
   .logo {
     width: 150px;
     margin: 1.5em;
@@ -351,6 +374,7 @@ footer p {
   .social-links li a {
     align-items: flex-start;
   }
+  /*Aumenta el tamaño de los iconos de redes sociales*/
   .social-links li a i {
     color: #d7dee6;
     text-decoration: none;
@@ -369,7 +393,7 @@ footer p {
     flex-wrap: wrap;
     justify-content: center;
   }
-
+  /*Modificando el */
   .post ul li {
     display: flex;
     min-height: 350px;
@@ -379,7 +403,7 @@ footer p {
     align-items: center;
     justify-content: center;
   }
-
+/*Se modifica el tamaño del isotipo*/
   .logo {
     width: 150px;
     margin: 1.5em;
@@ -417,14 +441,14 @@ footer p {
     flex-wrap: wrap;
     justify-content: center;
   }
-
+  /*Dimensionando los articulos*/
   .post ul li {
     min-height: 350px;
     max-height: 3500px;
     margin: 1rem 2rem;
     flex: 1 0 300px;
   }
-
+/*Se modifica el tamaño del logo de contacto*/
   .logo {
     width: 150px;
     margin: 1.5em;
@@ -447,12 +471,43 @@ footer p {
     display: flex;
     margin-top: 1em;
   }
+  /*Ajustando el ancho del parrafo acorde al tamaño del formulario*/
   .about .container .bio-info p {
-    width: 100%;
+    width: 75%;
+  }
+  /*Centra los elementos del formato de contacto*/
+  .contact {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 2px 4em;
+  }
+  /*Quitar el padding de las etiquetas label*/
+  .contact form.contact-form label {
+    margin: 0;
+    text-align: left;
+  }
+
+  /*Diseño del formato de contacto adaptado para tablets*/
+  .contact-form input,
+  .contact-form textarea {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 0px 2em;
+    font-size: 1em;
+    font-weight: 900;
+    
+    width: 90%;
+    margin-bottom: 2em;
   }
 }
 
 @media only screen and (min-width: 1024px) {
+  /*Aumentar el tamaño de texto de los elementos de la lista del navegador*/
+  .header nav ul.menu li a {
+    font-size: 1.5em;
+  }
+  /*Tomar todo el ancho de la pantalla*/
   .green-area div.post {
     width: 100%;
     margin: 0;
@@ -462,19 +517,19 @@ footer p {
   .green-area .post ul {
     justify-content: space-evenly;
   }
+  /*Modifica el padding del nombre*/
   .post h2 {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1.125em;
     margin: 0;
-    /*padding: 1em  0 0.5em 0;*/
     padding-top: 2em;
   }
   .post ul {
     list-style: none;
     padding-block-end: 2em;
   }
-
+/*Se crea un flex para ajustar la etiqueta article dentro del elemento li*/
   .post ul li {
     display: flex;
     padding: 0 2em 0 2em;
@@ -483,7 +538,7 @@ footer p {
     justify-content: center;
     justify-items: center;
   }
-
+  /*Se modifica el ancho de los articulos*/
   .post ul li article {
     overflow: hidden;
     border-radius: 10px;
@@ -492,7 +547,7 @@ footer p {
     padding-bottom: 2em;
     width: 18em;
   }
-
+/*Aumenta los iconos de las redes sociales*/
   .social-links {
     list-style: none;
     padding: 0;
@@ -503,11 +558,13 @@ footer p {
     justify-content: center;
     align-items: flex-start;
   }
+  /*Crea una cuadricula en la sección de información y contacto*/
   .about .container {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 25% auto;
   }
+  /*Selecciona solo la primera fila y las dos columnas*/
   .about h2 {
     text-transform: uppercase;
     font-weight: 700;
@@ -520,25 +577,28 @@ footer p {
     grid-row-end: 2;
     justify-items: center;
   }
+  /*Selecciona la primera columma junto con la siguiente fila*/
   .bio-info {
     padding: 0 2em 0 2em;
     grid-column-start: 1;
     grid-row-start: 2;
-    grid-column-end: auto;
-    grid-row-end: auto;
+    grid-column-end: 1fr;
+    grid-row-end: 1fr;
     align-content: flex-start;
   }
+  /*Aumenta el logo de ALDANA*/
   .bio-info img {
     width: 200px;
     padding-block-end: 2em;
   }
+  /*Se aumenta el padding de acuerdo a los pixeles de la pantalla respectiva*/
   .container.post {
     padding: 4em;
     width: 80%;
     margin: 0 auto;
     max-width: 1440px;
   }
-
+  /*Se ordena dentro de la cuadricula la información de contacto*/
   .contact {
     display: flex;
     flex-direction: column;
@@ -546,9 +606,10 @@ footer p {
     padding: 0px 1em;
     grid-row-start: 2;
     grid-column-start: 2;
-    grid-column-end: auto;
-    grid-row-end: auto;
+    grid-column-end: 1fr;
+    grid-row-end: 1fr;
   }
+  /*Se modifica especificamente el boton para enviar informacion*/
   .contact-form input[type="submit"] {
     background-color: #f74442;
     font-weight: 400;
@@ -558,19 +619,32 @@ footer p {
   }
 }
 @media only screen and (min-width: 1440px) {
+  /*Se separa los elementos flex dentro del header*/
   .header {
     display: flex;
     justify-content: space-between;
     width: 100%;
     margin: 0;
   }
+  /*Aumentar el tamaño de texto de los elementos de la lista del navegador*/
   .header nav ul.menu li a {
     font-size: 2em;
   }
+  /*Se modifica el tamaño del isotipo*/
+  .logo {
+    width: 150px;
+    margin: 1.5em;
+  }
+
+  /*Se restringe un ancho especifico para este tamaño*/
   .container {
     width: 80%;
     margin: 0 auto;
     max-width: 1440px;
+  }
+  /*Aumenta el tamaño de la foto de perfil*/
+  .container img{
+    width: 150px;
   }
   .big-hero {
     align-items: center;
@@ -602,6 +676,7 @@ footer p {
     padding-block-start: 1em;
     padding-block-end: 2em;
   }
+  /*Se modifica la etiqueta footer en las redes sociales para este tamaño de pantalla*/
   footer .social-links {
     height: 7em;
   }
